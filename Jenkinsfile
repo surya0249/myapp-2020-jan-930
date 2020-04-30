@@ -1,4 +1,4 @@
-pipeline {
+node('master'){
     agent any
     tools {
         maven 'maven3'
