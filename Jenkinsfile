@@ -1,12 +1,8 @@
 node('master'){
-    agent any
-    tools {
-        maven 'maven3'
-    }
     
-      
-        stage('build'){
-            sh "mvn clean package"
-        }
+     env.PATH = "/opt/maven3/bin/:$PATH"
+    stage('build'){
+        sh "mvn clean package"
+     }
     
 }
